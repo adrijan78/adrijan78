@@ -1,3 +1,5 @@
+import java.util.List;
+
 class Point {
 	String id
 	double x,y;
@@ -74,6 +76,23 @@ class Point {
 		}
 		if(x>0 && y<0){
 			System.out.println("Tockata se naogja vo IV kvadrant");
+		}
+	}
+
+
+
+}
+class Canvas{
+	List<Point> tocki;
+
+	void dodadi(Point p){
+		tocki.add(p);
+	}
+	void removeTocki(Point p){
+		for (Point tocka:tocki) {
+			if(tocka == p){
+				tocki.remove(tocka);
+			}
 		}
 	}
 
